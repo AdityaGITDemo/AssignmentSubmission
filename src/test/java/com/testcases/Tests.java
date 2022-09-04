@@ -49,7 +49,8 @@ public class Tests extends BaseClass {
 	
 	@AfterMethod(alwaysRun = true)
 	public void closeBrowser(){
-		driver.close();
+		//driver.close();
+		driver.quit();
 	}
 	
 	@Test(enabled=true)
@@ -64,14 +65,15 @@ public class Tests extends BaseClass {
 		wait.until(ExpectedConditions.titleContains(hpo.orderConfirmation()));
 		Assert.assertEquals(driver.getTitle(), hpo.orderConfirmation(), "Order not placed successfully!");
 		System.out.println(driver.getTitle());	
-		
+		Actions a= new Actions(driver);
+		a.moveToElement(hpo.accOpt()).build().perform();
+		hpo.logOut().click();
+		System.out.println(driver.getTitle());	
 	}
 	
 	@Test(enabled=false)
 	public void registrationProcess() throws Exception {
 		ArrayList data=d.getData(String.valueOf(prop.getProperty("serialNo")));
-		//System.out.println(data.get(1));
-		String a= String.valueOf(data.get(6));
 		lpo.loginOption().click();
 		lpo.continueOpt().click();
 		lpo.firstName().sendKeys(String.valueOf(data.get(1)));	
@@ -90,25 +92,13 @@ public class Tests extends BaseClass {
 		lpo.SubscribeNoOpt().click();
 		lpo.policyCheckBox().click();
 		lpo.continueOpt().click();
-		//System.out.println(driver.getTitle());
-		//System.out.println(driver.switchTo().alert().getText());
 		wait.until(ExpectedConditions.titleContains(lpo.accStatus()));
 		if((driver.getTitle().equals(lpo.registSuccess())))
 			System.out.println("User registered successfully!");
 		else
 			System.out.println("User Account already exists! Check user info..");
-			//throw new Exception("User Account already exists! Check user info..");
-		    
+
 	}
 	
-//	@Test(priority=1)
-//	public void test1(){
-//		System.out.println("Test 1");
-//	}
-//	
-//	@Test(priority=2)
-//	public void test2(){
-//		System.out.println("Test 2");
-//	}
 
 }

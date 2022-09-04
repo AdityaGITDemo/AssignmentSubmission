@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="18868" started-at="2022-07-01T12:17:56Z" finished-at="2022-07-01T12:18:15Z">
+  <suite name="Default suite" duration-ms="60843" started-at="2022-07-04T09:56:52Z" finished-at="2022-07-04T09:57:53Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="18868" started-at="2022-07-01T12:17:56Z" finished-at="2022-07-01T12:18:15Z">
+    <test name="Default test" duration-ms="60843" started-at="2022-07-04T09:56:52Z" finished-at="2022-07-04T09:57:53Z">
       <class name="com.testcases.Tests">
-        <test-method status="PASS" signature="objCreate()[pri:0, instance:com.testcases.Tests@3498ed]" name="objCreate" is-config="true" duration-ms="10323" started-at="2022-07-01T17:47:56Z" finished-at="2022-07-01T17:48:06Z">
+        <test-method status="PASS" signature="objCreate()[pri:0, instance:com.testcases.Tests@193932a]" name="objCreate" is-config="true" duration-ms="10185" started-at="2022-07-04T15:26:52Z" finished-at="2022-07-04T15:27:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- objCreate -->
-        <test-method status="PASS" signature="endToEndTest()[pri:0, instance:com.testcases.Tests@3498ed]" name="endToEndTest" duration-ms="8439" started-at="2022-07-01T17:48:06Z" finished-at="2022-07-01T17:48:15Z">
+        <test-method status="PASS" signature="endToEndTest()[pri:0, instance:com.testcases.Tests@193932a]" name="endToEndTest" duration-ms="49860" started-at="2022-07-04T15:27:03Z" finished-at="2022-07-04T15:27:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endToEndTest -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.testcases.Tests@3498ed]" name="closeBrowser" is-config="true" duration-ms="98" started-at="2022-07-01T17:48:15Z" finished-at="2022-07-01T17:48:15Z">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.testcases.Tests@193932a]" name="closeBrowser" is-config="true" duration-ms="785" started-at="2022-07-04T15:27:52Z" finished-at="2022-07-04T15:27:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
