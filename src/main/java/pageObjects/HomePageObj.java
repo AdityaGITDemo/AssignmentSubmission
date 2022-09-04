@@ -57,7 +57,14 @@ public WebDriver driver;
 		return confirmOrder;
 	}
 	
-	@FindBy(css="//div[@class='block_3']//ul//li[@data-id='menu_account']//span[text()='Logout']") 
+	@FindBy(xpath="//ul[@id='main_menu_top']//li[@data-id='menu_account']") 
+	WebElement accOpt;
+	
+	public WebElement accOpt(){
+		return accOpt;
+	}
+	
+	@FindBy(xpath="//ul[@id='main_menu_top']//li[@data-id='menu_logout']//span") 
 	WebElement logOut;
 	
 	public WebElement logOut(){
